@@ -1,20 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import skyLine from "../assets/20250814_0197.jpg";
-
+import myPic from "src/assets/Steven_Kell.jpg";
+import { MyCustomButton } from "../components/MyCustomButton.tsx";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
 	<header>
-		<div class="py-0.5 text-center bg-yellow-50 ">
-			<h1 class="text-3xl tracking-wider text-shadow-lg">Steven Kell</h1>
-			<p class="text-2xl tracking-tight text-shadow-md ">
+		<div class="py-0.5 text-center place-items-center 2xl:max-w-5xl">
+			<h1 class="text-5xl tracking-wider text-shadow-lg text-amber-600 text-shadow-amber-700 ">Steven Kell</h1>
+			<p class="text-2xl tracking-tight text-shadow-md text-amber-600 text-shadow-amber-700">
 				Committed to growing the open-source community
 			</p>
-			<Image src={skyLine} alt="Skyline" class=" opacity-90 shadow-[0_35px_35px_rgba(0,0,220,0.25)]" />
+			<Image src={myPic} alt="Me" class=" w-1/2" />
+<MyCustomButton client:load>
+    Click Me (with React Aria)
+  </MyCustomButton>
 		</div>
 	</header>
 </Layout>

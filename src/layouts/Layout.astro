@@ -11,9 +11,9 @@ import "../styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>Steven Kell's Blog</title>
 	</head>
-	<body class="bg-linear-[361deg,red_5%,orange_60%,yellow_90%,orange]">
-		<nav >
-			<ul class="flex items-center justify-around p-3 ">
+	<body class="bg-[url(/src/assets/20250814_0191.jpg)] bg-cover place-items-center">
+		<nav class="text-xl">
+			<ul class="grid grid-cols-3 items-center gap-24 py-4">
 				<li><a href="#">Home</a></li>
 				<li><a href="showcase">Showcase</a></li>
 				<li><a href="about">About</a></li>
@@ -23,13 +23,3 @@ import "../styles/global.css";
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		font-family: 'Inter, sans-serif';
-	}
-</style>
