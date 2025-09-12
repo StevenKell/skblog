@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import myPic from "src/assets/Steven_Kell.jpg";
 import Gallery from "src/components/Gallery";
 const images = [
@@ -16,8 +16,6 @@ const images = [
 	{ src: "src/assets/20250816_0042.jpg", alt: "Unknown image 0042" },
 	{ src: "src/assets/20250816_0066.jpg", alt: "Unknown image 0066" },
 	{ src: "src/assets/20250816_0092.jpg", alt: "Unknown image 0092" },
-	{ src: "src/assets/astro.svg", alt: "Astro logo" },
-	{ src: "src/assets/background.svg", alt: "Background graphic" },
 	{ src: "src/assets/Steven_Kell.jpg", alt: "Portrait of Steven Kell" },
 ];
 import "../styles/global.css";
@@ -27,13 +25,13 @@ import "../styles/global.css";
 ---
 
 <Layout>
-	<header >
-		<div class="py-0.5 text-center place-items-center 2xl:max-w-5xl">
+	<header>
+		<div class=" grid py-0.5 text-center justify-center 2xl:max-w-5xl">
 			<h1 class="py-0.5">Steven Kell</h1>
 			<p class="py-1">
 		 		Committed to growing the open-source community
 			</p>
-			<Image src={myPic} alt="Me" class=" w-1/4 py-2 border-amber-500 rounded-2xl  "/>
+			<Picture src={myPic} alt="Me" class=" w-1/4 py-2 border-amber-500  rounded-2xl  "/>
 				<Gallery client:load images={images} />
 			    
 		</div>
