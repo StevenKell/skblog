@@ -25,15 +25,17 @@ import "../styles/global.css";
 ---
 
 <Layout>
-	<header>
-		<div class=" grid py-0.5 text-center justify-center 2xl:max-w-5xl">
-			<h1 class="py-0.5">Steven Kell</h1>
-			<p class="py-1">
-		 		Committed to growing the open-source community
-			</p>
-			<Picture src={myPic} alt="Me" class=" w-1/4 py-2 border-amber-500  rounded-2xl  "/>
-				<Gallery client:load images={images} />
-			    
-		</div>
-	</header>
+		<header >
+			<div class="grid py-0.5 text-center justify-center 2xl:max-w-5xl">
+				<h1 class="text-2xl text-shadow-2xl text-blue-50 py-9">Steven Kell</h1>
+								<div class="profile-row">
+									<Picture src={myPic} alt="Me" class="profile-img" />
+									<p class="profile-text text-blue-50 text-shadow-blue-900">
+										Committed to growing the open-source community
+									</p>
+								</div>
+			</div>
+			
+		</header>
+	<Gallery client:load images={images} />
 </Layout>

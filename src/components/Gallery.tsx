@@ -13,11 +13,11 @@ export default function Gallery({ images }: GalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 ">
       {images.map((img, idx) => (
         <button
           key={idx}
-          className="relative aspect-square overflow-hidden rounded-2xl shadow hover:scale-[1.02] transition"
+          className="relative aspect-square overflow-hidden w-3/4 rounded-2xl shadow hover:scale-[1.02] transition ml-10 pb-6"
           onClick={() => setSelectedIndex(idx)}
         >
           <img
@@ -65,7 +65,7 @@ function Lightbox({ image, onClose }: LightboxProps) {
             ref={ref}
             {...overlayProps}
             {...dialogProps}
-            className="relative max-w-4xl w-full p-4"
+            className="relative max-w-6xl w-full p-4"
           >
             <Button
               variant="ghost"

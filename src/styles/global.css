@@ -1,3 +1,33 @@
+/* Custom profile row styles */
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  
+}
+.profile-img {
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+  width: 14rem;
+  height: 14rem;
+  object-fit: cover;
+  opacity: 1;
+  z-index: 1;
+  
+}
+.profile-text {
+  background-color: rgba(6, 6, 51, 0.377); /* 50% opacity blue */
+  font-size: 1.875rem;
+  text-shadow: 2px 2px 4px #00000022;
+  padding: 0.25rem 0.5rem;
+  opacity: 1;
+  z-index: 0;
+  height: 5.5rem;
+  padding-top: 3%;
+
+
+}
 @import "tailwindcss";
 
 html,
@@ -58,7 +88,7 @@ body {
     }
 
     h1 {
-      font-size: var(--text-2xl--line-height);
+      font-size: var(--text-3xl--line-height);
       font-weight: var(--font-weight-semibold);
       color: var(--color-gray-950);
     }
